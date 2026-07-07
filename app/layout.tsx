@@ -1,25 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Cinzel, Manrope, Space_Mono } from "next/font/google";
+import { Press_Start_2P, VT323 } from "next/font/google";
 import "./globals.css";
 
-const cinzel = Cinzel({
+// Chunky 8-bit display face for the wordmark, level number, and buttons.
+const pressStart = Press_Start_2P({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["400"],
   variable: "--font-display",
   display: "swap",
 });
 
-const manrope = Manrope({
+// A readable terminal/pixel face for body copy, quest titles, and numbers.
+const vt323 = VT323({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400"],
   variable: "--font-body",
-  display: "swap",
-});
-
-const spaceMono = Space_Mono({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-mono",
   display: "swap",
 });
 
@@ -30,7 +25,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#141026",
+  themeColor: "#14122b",
   width: "device-width",
   initialScale: 1,
 };
@@ -39,7 +34,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${cinzel.variable} ${manrope.variable} ${spaceMono.variable}`}>
+    <html lang="en" className={`${pressStart.variable} ${vt323.variable}`}>
       <body>{children}</body>
     </html>
   );
