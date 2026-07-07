@@ -1,0 +1,35 @@
+{
+  "name": "quest-log",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A gamified CRUD todo app — complete quests, earn XP, level up. Next.js + Neon, deployable to Vercel.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "canvas-confetti": "^1.9.3",
+    "drizzle-orm": "^0.38.3",
+    "next": "^15.1.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/canvas-confetti": "^1.6.4",
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.4",
+    "@types/react-dom": "^19.0.2",
+    "dotenv": "^16.4.7",
+    "drizzle-kit": "^0.30.1",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.3"
+  }
+}
